@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Template Downloads</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    .meme {
+      margin: 20px 0;
+    }
+    .meme img {
+      max-width: 300px;
+      height: auto;
+    }
+    .download {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-top: 10px;
+      background-color: #008CBA;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Download Meme Templates</h1>
+  
+  <div class="meme">
+    <img src="meme1.jpg" alt="Meme 1">
+    <br>
+    <a class="download" href="meme1.jpg" download>Download Meme 1</a>
+  </div>
+  
+  <div class="meme">
+    <img src="meme2.jpg" alt="Meme 2">
+    <br>
+    <a class="download" href="meme2.jpg" download>Download Meme 2</a>
+  </div>
+</body>
+</html>
