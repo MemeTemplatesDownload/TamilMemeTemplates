@@ -1,21 +1,32 @@
 /* styles.css */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #4CAF50;
+    background: linear-gradient(to right, #4CAF50, #388E3C);
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 1.5em 0;
 }
 
 h1 {
     margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 1.2em;
 }
 
 .gallery {
@@ -23,19 +34,46 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    margin: 0 auto;
 }
 
 .meme {
-    margin: 10px;
+    margin: 15px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.meme:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .meme img {
-    max-width: 100%; /* Make images responsive */
+    max-width: 100%;
     height: auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-width: 300px; /* Max width of images */
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.meme img:hover {
+    transform: scale(1.05);
+}
+
+.meme p {
+    margin: 10px 0 0;
+    font-weight: bold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Media Queries for Responsiveness */
@@ -45,6 +83,18 @@ h1 {
     }
 
     .meme {
-        flex: 1 1 100%; /* Full width on small screens */
+        flex: 1 1 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .meme {
+        flex: 1 1 calc(33.33% - 30px); /* Three memes per row */
+    }
+}
+
+@media (min-width: 1024px) {
+    .meme {
+        flex: 1 1 calc(25% - 30px); /* Four memes per row */
     }
 }
